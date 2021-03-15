@@ -1,9 +1,12 @@
 <?php
 
-
-class User extends Controller
+class user extends Controller
 {
-    public function show(){
-        $this->view('user/show', null);
+
+    public function show($name)
+    {
+        $this->view('user/show', ['name' => $name]);
     }
 }
+
+?>

@@ -1,7 +1,7 @@
 Options -MultiViews
 RewriteEngine On
 
-RewriteBase /mvctest/M120-Benutzerschnittstellen/public
+RewriteBase /mvctest/M120-Projektarbeit/public
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f

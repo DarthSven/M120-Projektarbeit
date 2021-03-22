@@ -3,10 +3,10 @@
 class Home extends Controller
 {
 
-    public function index($name = '')
+    public function index($id = 1)
     {
         $user = $this->model('user');
-        $user->id = 1;
+        $user->id = $id;
 
         $age = $user->getAge();
 

@@ -1,6 +1,6 @@
 <?php
 
-class user extends Controller
+class User extends Controller
 {
 
     public function show($name)

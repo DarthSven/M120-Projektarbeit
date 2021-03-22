@@ -5,7 +5,12 @@ class home extends Controller
 
     public function index($name = '')
     {
-        $this->view('home/index', ['name' => $name]);
+        $user = $this->model('user');
+        $user->id = 1;
+
+        $age = $user->getAge();
+
+        $this->view('home/index', ['name' => $age]);
     }
 }
 

@@ -1,6 +1,6 @@
 .ticketButton:hover{
     background-color: yellow;
-    transform: scale(1.5, 1);
+    transform: scaleX(1.2);
 }
 .divCenter {
     display:flex;

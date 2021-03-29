@@ -69,3 +69,7 @@ a:hover {
     background-size: cover;
 
 }
+.btnSettings{
+    top: 25px;
+    right: 25px;
+}

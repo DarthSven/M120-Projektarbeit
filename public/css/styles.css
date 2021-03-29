@@ -1,6 +1,6 @@
 .ticketButton:hover {
     background-color: yellow;
-    transform: scale(1.5);
+    transform: scaleX(1.2);
 }
 
 
@@ -37,5 +37,28 @@ a:hover {
 .OuterDiv {
     height: 100vh;
     width: 100vw;
+
+}
+
+#Mehrfahrtenkarte{
+    background-image: url("../img/dampflok.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+#HinRueckFahrt {
+    background-image: url("../img/japanLok.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+#EinFahrt{
+    background-image: url("../img/subway.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
 }

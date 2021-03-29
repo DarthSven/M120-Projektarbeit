@@ -17,7 +17,9 @@
                     <input type="text" class="form-control" placeholder="Wil" id="Ankunft">
                 </div>
             </div>
+
         </form>
+            
     </div>
 </div>
 

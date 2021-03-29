@@ -1,11 +1,15 @@
 .ticketButton:hover{
     background-color: yellow;
-
+    transform: scale(1.5);
 }
 .divCenter {
     display:flex;
     justify-content:center;
     align-items:center;
+
+}
+
+.maxHeight{
     height: 100vh;
 }
 

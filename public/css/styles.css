@@ -1,3 +1,9 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
 .ticketButton:hover{
     background-color: yellow;
     transform: scaleX(1.2);

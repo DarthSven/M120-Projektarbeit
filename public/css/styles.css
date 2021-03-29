@@ -1,6 +1,6 @@
 .ticketButton:hover{
     background-color: yellow;
-    transform: scale(1.5);
+    transform: scale(1.5, 1);
 }
 .divCenter {
     display:flex;
@@ -47,4 +47,5 @@ a:hover{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
 }

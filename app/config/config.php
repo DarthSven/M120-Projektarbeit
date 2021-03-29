@@ -1,8 +1,10 @@
 <?php
+
     define('DB_TYPE', 'mysql');
-    define('DB_HOST', 'musibuda.mysql.db.hostpoint.ch');
-    define('DB_NAME', 'musibuda_SvenBrunner');
-    define('DB_USER', 'musibuda_Sven');
-    define('DB_PASS', 'Projekt2020');
+    define("DB_HOST", 'localhost');
+    define("DB_NAME", "test");
+    define("DB_USER", "root");
+    define("DB_PASSWORD", "");
+
 
 ?>

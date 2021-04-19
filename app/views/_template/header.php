@@ -11,6 +11,7 @@
     <script src="/M120-Projektarbeit/public/js/script.js"></script>
     <link rel="stylesheet" href="/M120-Projektarbeit/public/css/styles.css" type="text/css" crossorigin="anonymous">
     <title>SBB-Ticketautomat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body class="grid-Container">
 <div class="row ">

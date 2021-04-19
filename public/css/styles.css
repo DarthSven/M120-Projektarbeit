@@ -76,3 +76,8 @@ a:hover {
     grid-template-columns: 1fr;
     height: 100vh;
 }
+
+.form-part{
+    margin: 25px;
+    text-align: left ;
+}

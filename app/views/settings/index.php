@@ -1,8 +1,9 @@
 
 
-<div class="row mh-100">
-    <form >
-        <div class="form-row">
+<div class="row mh-100 container">
+
+    <form class="form" onsubmit="">
+        <div class="form-group row form-part">
             Font size :
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="fontSizeRadio" id="fontSizeRadioBig">
@@ -23,17 +24,14 @@
                 </label>
             </div>
         </div>
-
-
-                <button  type="button"> <i class="far fa-moon fa-5x"></i></button>
-
-
-
-        <button type="button" onclick="goBack()"  ><i class="far fa-arrow-alt-circle-left fa-5x"></i> </button>
+        <div class="row">
+            <button  class="btn form-part" type="button"> <i class="far fa-moon fa-5x"></i></button>
         </div>
 
-
-
+        <div class="row">
+            <button class="btn form-part" type="submit"></button>
+        </div>
 
     </form>
+<button class="btn" type="button" onclick="goBack()"  ><i class="far fa-arrow-alt-circle-left fa-5x"></i> </button>
 </div>

@@ -14,9 +14,7 @@
 </head>
 <body class="grid-Container">
 <div class="row ">
-<div class="col  d-flex justify-content-between">
-    <div id='buttonBack' onclick="goBack()" class="d-inline"> <i class="far fa-arrow-alt-circle-left fa-5x"></i> </div>
-
+<div class="col  d-flex justify-content-end">
     <a  href="settings" class="d-inline"><i class="fas fa-cog fa-5x"></i></a>
 </div>
 

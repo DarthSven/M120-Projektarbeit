@@ -11,4 +11,9 @@
     <link rel="stylesheet" href="/M120-Projektarbeit/public/css/styles.css" type="text/css" crossorigin="anonymous">
     <title>SBB-Ticketautomat</title>
 </head>
-<body>
+<body class="grid-Container">
+<div class="row">
+
+    <a style="display:flex;justify-content:flex-end;align-items:center;"><i class="fas fa-cog fa-5x"></i></a>
+
+</div>

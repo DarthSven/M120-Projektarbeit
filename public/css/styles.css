@@ -19,9 +19,7 @@
 
 }
 
-.maxHeight {
-    height: 100vh;
-}
+
 
 a {
     color: black;
@@ -70,7 +68,11 @@ a:hover {
     background-size: cover;
 
 }
-.btnSettings{
-    top: 25px;
-    right: 25px;
+
+
+.grid-Container{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 1fr;
+    height: 100vh;
 }

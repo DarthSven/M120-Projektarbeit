@@ -1,35 +1,30 @@
 <div class="row mh-100 container">
 
-    <form class="form" onsubmit="">
+    <form class="form" method="get">
         <div class="form-group row form-part">
             Font size :
 
             <?php
-           echo '  <div class="form-check">
-                <input class="form-check-input" type="radio" name="fontSizeRadio" id="fontSizeRadioBig"';
-           if ($_COOKIE['size'] == "big")echo "checked";
-           echo '>
-                <label class="form-check-label" for="fontSizeRadioBig">
-                    Big
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="fontSizeRadio" id="fontSizeRadioMedium" ';
-                if($_COOKIE['size'] == "medium")echo "checked";
-                echo '>
-                <label class="form-check-label" for="fontSizeRadioMedium">
-                    Medium
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="fontSizeRadio" id="fontSizeRadioSmall" ';
+           echo ' <select name="fontSize" id="fontSize">
+  <option value="big"';
+           if($data["size"] == "big")
+               echo "selected";
 
-            if($_COOKIE['size'] == "small")echo "checked";
-            echo '>
-                <label class="form-check-label" for="fontSizeRadioSmall">
-                    Small
-                </label>
-            </div>
+            echo '
+  
+  >BIG</option>
+  <option value="medium"';
+             if($data["size"] == "medium")
+                 echo "selected";
+            echo '
+  
+  >MEDIUM</option>
+  <option value="small"';
+            if($data["size"] == "small")
+                echo "selected";
+            echo  '>SMALL</option>
+    
+</select>
             ';
 
             ?>
@@ -37,17 +32,17 @@
         </div>
         <div class="row">
             <?php
-            if($_COOKIE['darkmode'] == 'true'){
-                echo '<button  class="btn form-part" type="button"> <i class="far fa-moon fa-5x"></i></button>';
+            if($data['darkmode'] == 'true'){
+                echo '<button name="lightmode"  class="btn form-part" type="submit"> <i class="far fa-moon fa-5x"></i></button>';
             }else{
-                echo '<button  class="btn form-part" type="button"> <i class="fas fa-moon fa-5x"></i></button>';
+                echo '<button  name="darkmode"   class="btn form-part" type="submit"> <i class="fas fa-sun fa-5x"></i></button>';
             }
             ?>
 
         </div>
 
         <div class="row">
-            <button class="btn form-part" type="submit"></button>
+            <button class="btn form-part" type="submit">Save</button>
         </div>
 
     </form>

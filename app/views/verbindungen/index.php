@@ -5,8 +5,8 @@
             Ankunftsort: <?= $data["nach"] ?><br>
             Abfahrtszeit: <?= $data["time"] ?></p>
 
-        <h1>Lade Verbindungen...</h1>
         <div id="verbindungenDiv">
+            <h1>Lade Verbindungen...</h1>
 
         </div>
     </div>
@@ -18,10 +18,15 @@
 
             $("#verbindungenDiv").empty();
             $("#verbindungenDiv").append("<table>");
+            $("#verbindungenDiv").append("<thead>");
+            $("#verbindungenDiv").append("<tr><th>Von</th><th>Bis</th><th>Abfahrtszeit</th><th>Ankunftszeit</th></tr>");
+            $("#verbindungenDiv").append("</thead>");
 
             result.connections.forEach(connection => {
                 let abfahrt = new Date(connection.from.departure).toLocaleString();
                 let ankunft = new Date(connection.to.arrival).toLocaleString();
+                console.log(abfahrt);
+                console.log(ankunft);
             });
             $("#verbindungenDiv").append("</table>");
 

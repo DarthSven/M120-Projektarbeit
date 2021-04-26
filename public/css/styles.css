@@ -10,7 +10,10 @@
     transform: scaleX(1.2);
 
 }
-
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
 
 .divCenter {
     display: flex;

@@ -19,21 +19,21 @@ class Settings extends Controller{
     public function index(){
 
         $changed = FALSE;
-        if(isset($_GET["fontSize"])){
+        if(isset($_POST["fontSize"])){
             $cookie_name = "size";
-            $cookie_value = $_GET["fontSize"];
+            $cookie_value = $_POST["fontSize"];
             setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
 
             $changed = TRUE;
         }
-        if(isset($_GET["lightmode"])){
+        if(isset($_POST["lightmode"])){
             $cookie_name = "darkmode";
             $cookie_value = "false";
             setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
 
             $changed = TRUE;
         }
-        if(isset($_GET["darkmode"])){
+        if(isset($_POST["darkmode"])){
             $cookie_name = "darkmode";
             $cookie_value = "true";
             setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
@@ -43,6 +43,7 @@ class Settings extends Controller{
         if($changed){
             header("Refresh:0, url=Settings");
         }
+
 
         $this->view('settings/index');
     }

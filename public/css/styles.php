@@ -138,7 +138,6 @@ table {
     right: 0;
     bottom: 0;
     z-index: 2;
-    background-color: rgba(79,80,84,0.9);
     border-radius: 50px;
     color: white;
     font-weight: bold;

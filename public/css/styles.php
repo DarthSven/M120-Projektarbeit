@@ -130,7 +130,7 @@ table {
 }
 #overlay {
     position: fixed;
-    display: block;
+    display: none;
     width: 60%;
     height: 60%;
     top: 20%;

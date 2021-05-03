@@ -7,20 +7,20 @@
             <?php
            echo ' <select name="fontSize" id="fontSize">
   <option value="big"';
-           if($data["size"] == "big")
+           if($_COOKIE["size"] == "big")
                echo "selected";
 
             echo '
   
   >BIG</option>
   <option value="medium"';
-             if($data["size"] == "medium")
+             if($_COOKIE["size"] == "medium")
                  echo "selected";
             echo '
   
   >MEDIUM</option>
   <option value="small"';
-            if($data["size"] == "small")
+            if($_COOKIE["size"] == "small")
                 echo "selected";
             echo  '>SMALL</option>
     
@@ -32,7 +32,7 @@
         </div>
         <div class="row">
             <?php
-            if($data['darkmode'] == 'true'){
+            if($_COOKIE['darkmode'] == 'true'){
                 echo '<button name="lightmode"  class="btn form-part" type="submit"> <i class="far fa-moon fa-5x"></i></button>';
             }else{
                 echo '<button  name="darkmode"   class="btn form-part" type="submit"> <i class="fas fa-sun fa-5x"></i></button>';

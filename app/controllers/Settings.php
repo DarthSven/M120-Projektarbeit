@@ -17,7 +17,7 @@ class Settings extends Controller{
     }
 
     public function index(){
-        $data = $_COOKIE;
+
         $changed = FALSE;
         if(isset($_GET["fontSize"])){
             $cookie_name = "size";

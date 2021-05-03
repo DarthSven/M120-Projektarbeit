@@ -1,6 +1,7 @@
 <div class="row mh-100 container">
 
-    <form class="form" method="get">
+    <form class="form" method="post">
+
         <div class="form-group row form-part">
             Font size :
 
@@ -47,4 +48,5 @@
 
     </form>
 <button class="btn" type="button" onclick="goBack()"  ><i class="far fa-arrow-alt-circle-left fa-5x"></i> </button>
+
 </div>

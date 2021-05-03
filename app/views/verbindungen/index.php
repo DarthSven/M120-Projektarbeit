@@ -13,6 +13,17 @@
         </div>
     </div>
 </div>
+<div id="overlay">
+    <form class="numbersform">
+        <br>
+        <label>Erwachsende</label><br>
+        <input type="number" placeholder="0" name="erwachsene"><br>
+        <label>Kinder / Halbtax</label><br>
+        <input type="number" placeholder="0" name="kinder"><br>
+        <label>Hunde</label><br>
+        <input type="number" placeholder="0 name="hunde"><br>
+    </form>
+</div>
 <script>
     $.ajax({
         url: "http://transport.opendata.ch/v1/connections?from=<?=$data["von"]?>&to=<?=$data["nach"]?>&time=<?=$data["time"]?>",

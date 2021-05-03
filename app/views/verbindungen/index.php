@@ -17,11 +17,16 @@
     <form class="numbersform">
         <br>
         <label>Erwachsende</label><br>
-        <input type="number" placeholder="0" name="erwachsene"><br>
+        <input type="number" placeholder="0" name="erwachsene" class="form-control"><br>
         <label>Kinder / Halbtax</label><br>
-        <input type="number" placeholder="0" name="kinder"><br>
+        <input type="number" placeholder="0" name="kinder" class="form-control"><br>
         <label>Hunde</label><br>
-        <input type="number" placeholder="0 name="hunde"><br>
+        <input type="number" placeholder="0" name="hunde" class="form-control"><br>
+        <br>
+        <div class="forms-button-div">
+            <button class="forms-button btn btn-primary">Weiter</button>
+            <button class="forms-button btn btn-secondary">Zurück</button>
+        </div>
     </form>
 </div>
 <script>

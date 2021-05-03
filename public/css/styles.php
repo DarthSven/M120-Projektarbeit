@@ -1,12 +1,37 @@
+<?php header("Content-type: text/css"); ?>
+
+<?php
+    $fontsize="";
+    $textcolor="black";
+    $backgroundcolor="white";
+    switch ($_COOKIE["size"]){
+        case "big":
+            $fontsize="larger";
+            break;
+        case "small":
+            $fontsize="smaller";
+            break;
+        default :
+            $fontsize="default";
+            break;
+    }
+    if ($_COOKIE["darkmode"] == "true"){
+        $textcolor="white";
+        $backgroundcolor="black";
+    }
+?>
 * {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
     overflow-y: hidden;
+    font-size:<?=$fontsize?>;
+    color : <?=$textcolor?>;
+    background-color: <?=$backgroundcolor?>;
 }
 
 .ticketButton:hover {
-    background-color: yellow;
+
     transform: scaleX(1.2);
 
 }
@@ -25,7 +50,7 @@ a {
 }
 
 a:hover {
-    color: black;
+    color: <?=$textcolor?>;
 }
 
 

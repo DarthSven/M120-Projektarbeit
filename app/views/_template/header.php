@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/656e38591d.js" crossorigin="anonymous"></script>
     <script src="/M120-Projektarbeit/public/js/script.js"></script>
-    <link rel="stylesheet" href="/M120-Projektarbeit/public/css/styles.css" type="text/css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/M120-Projektarbeit/public/css/styles.php" type="text/css" crossorigin="anonymous">
     <title>SBB-Ticketautomat</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>

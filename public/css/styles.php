@@ -25,9 +25,9 @@
     padding: 0px;
     overflow-x: hidden;
     overflow-y: hidden;
-    font-size:<?=$fontsize?>;
-    color : <?=$textcolor?>;
-    background-color: <?=$backgroundcolor?>;
+    font-size:<?=$fontsize?> ;
+    color : <?=$textcolor?> !important;
+    background-color: <?=$backgroundcolor?> !important;
 }
 
 .ticketButton:hover {

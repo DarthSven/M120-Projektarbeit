@@ -39,7 +39,7 @@
     }
 
     function GoToFinishPage() {
-        window.location.href = "../../../../Ticket/" + $("#abfahrtsort")[0].value + "/" + $("#ankunftsort")[0].value + "/" + $("#abfahrtInput")[0].value + "/" + $("#ankunftInput")[0].value + "/" + $("#erwachsene")[0].value + "/" + $("#kinder")[0].value + "/" + $("#hunde")[0].value
+        window.location.href = "../../../Ticket/" + $("#abfahrtsort")[0].value + "/" + $("#ankunftsort")[0].value + "/" + $("#abfahrtInput")[0].value + "/" + $("#ankunftInput")[0].value + "/" + $("#erwachsene")[0].value + "/" + $("#kinder")[0].value + "/" + $("#hunde")[0].value
     }
 
     $.ajax({

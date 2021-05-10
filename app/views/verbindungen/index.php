@@ -35,6 +35,7 @@
 <script>
     function GoBack() {
         $("#oberlay").hide();
+        
     }
 
     function GoToFinishPage() {

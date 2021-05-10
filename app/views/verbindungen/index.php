@@ -35,11 +35,11 @@
 <script>
     function GoBack() {
         $("#oberlay").hide();
-        
+
     }
 
     function GoToFinishPage() {
-        window.location.href = "../../../../Ticket/" + $("#abfahrtsort")[0].val() + "/" + $("#ankunftsort")[0].val() + "/" + $("#abfahrtInput")[0].val() + "/" + $("#ankunftInput")[0].val() + "/" + $("#erwachsene")[0].val() + "/" + $("#kinder")[0].val() + "/" + $("#hunde")[0].val()
+        window.location.href = "../../../../Ticket/" + $("#abfahrtsort")[0].value + "/" + $("#ankunftsort")[0].value + "/" + $("#abfahrtInput")[0].value + "/" + $("#ankunftInput")[0].value + "/" + $("#erwachsene")[0].value + "/" + $("#kinder")[0].value + "/" + $("#hunde")[0].value
     }
 
     $.ajax({

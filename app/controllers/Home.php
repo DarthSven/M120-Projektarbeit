@@ -5,6 +5,7 @@ class Home extends Controller
 
     public function index($id = 1)
     {
+        echo $id;
         $user = $this->model('user');
         $user->id = $id;
 

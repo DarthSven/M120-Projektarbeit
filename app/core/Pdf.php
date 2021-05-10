@@ -3,15 +3,15 @@
 class Pdf{
 
     public function __construct(){
-        require_once('../wapp/tcpdf/tcpdf.php');
+        require_once('../app/tcpdf/tcpdf.php');
     }
-    public function billing(){
-        $html ="<h1>NEUES PDF </h1>";
+    public function billing(TicketModel $ticket){
+        $html ="<h1>Ticket </h1><br><h2>von ".$ticket->von." nach ".$ticket->nach."</h2>";
         $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
         $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor("der Autor");
-        $pdf->SetTitle('Rechnung '."Ticket");
-        $pdf->SetSubject('Rechnung '."Ticket");
+        $pdf->SetAuthor("PHP GOD 23");
+        $pdf->SetTitle('Ticket '.$ticket->von." - ".$ticket->nach);
+        $pdf->SetSubject('Ticket '.$ticket->von." - ".$ticket->nach);
         $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
 
 // Auswahl der MArgins
@@ -35,7 +35,7 @@ class Pdf{
         $pdf->writeHTML($html, true, false, true, false, '');
 
 //Ausgabe der PDF
-    $pdfName ="Hanspeter";
+    $pdfName ="Ticket";
 //Variante 1: PDF direkt an den Benutzer senden:
         $pdf->Output($pdfName, 'I');
     }

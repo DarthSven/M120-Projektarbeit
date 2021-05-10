@@ -3,10 +3,11 @@
 
 class Ticket extends Controller
 {
-    public function index($von, $nach, $ab, $an, $erw, $kid, $dog){
+    public function index($von, $nach, $ab, $an, $erw, $kid, $dog)
+    {
         require_once('../app/core/Pdf.php');
-        require_once ('../app/models/TicketModel.php');
-       $pdf = new Pdf();
+        require_once('../app/models/TicketModel.php');
+        $pdf = new Pdf();
 
         $ticket = new TicketModel();
         $ticket->von = $von;
@@ -18,5 +19,5 @@ class Ticket extends Controller
         $ticket->hunde = $dog;
         $pdf->billing($ticket);
         $this->view("home/index");
-   }
+    }
 }

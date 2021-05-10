@@ -141,6 +141,11 @@ table {
     border-radius: 50px;
     color: white;
     font-weight: bold;
+    background-color: gray !important;
+}
+#overlay * {
+    background-color: gray !important;
+
 }
 .numbersform {
     margin: 30px;

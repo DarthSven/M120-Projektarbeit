@@ -34,7 +34,7 @@
 </div>
 <script>
     function GoBack() {
-        $("#oberlay").hide();
+        $("#overlay").hide();
 
     }
 

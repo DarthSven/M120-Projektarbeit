@@ -6,24 +6,24 @@
             Font size :
 
             <?php
-           echo ' <select name="fontSize" id="fontSize">
+            echo ' <select name="fontSize" id="fontSize">
   <option value="big"';
-           if($_COOKIE["size"] == "big")
-               echo "selected";
+            if ($_COOKIE["size"] == "big")
+                echo "selected";
 
             echo '
   
   >BIG</option>
   <option value="medium"';
-             if($_COOKIE["size"] == "medium")
-                 echo "selected";
+            if ($_COOKIE["size"] == "medium")
+                echo "selected";
             echo '
   
   >MEDIUM</option>
   <option value="small"';
-            if($_COOKIE["size"] == "small")
+            if ($_COOKIE["size"] == "small")
                 echo "selected";
-            echo  '>SMALL</option>
+            echo '>SMALL</option>
     
 </select>
             ';
@@ -33,9 +33,9 @@
         </div>
         <div class="row">
             <?php
-            if($_COOKIE['darkmode'] == 'true'){
+            if ($_COOKIE['darkmode'] == 'true') {
                 echo '<button name="lightmode"  class="btn form-part" type="submit"> <i class="far fa-moon fa-5x"></i></button>';
-            }else{
+            } else {
                 echo '<button  name="darkmode"   class="btn form-part" type="submit"> <i class="fas fa-sun fa-5x"></i></button>';
             }
             ?>
@@ -47,6 +47,13 @@
         </div>
 
     </form>
-<button class="btn" type="button" onclick="goBack()"  ><i class="far fa-arrow-alt-circle-left fa-5x"></i> </button>
+    <?php
+    $link = "localhost/M120-Projektarbeit/public";
+    if(isset($_COOKIE["href"]))
+    {
+        $link = $_COOKIE["href"];
+    }
+    echo "<a class='btn' type='button' href='$link'><i class='far fa-arrow-alt-circle-left fa-5x'></i></a>";
+    ?>
 
 </div>

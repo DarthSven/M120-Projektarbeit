@@ -5,7 +5,7 @@ class Pdf{
     public function __construct(){
         require_once('../app/tcpdf/tcpdf.php');
     }
-    public function billing(TicketModel $ticket){
+    public function GenerateTicket(TicketModel $ticket){
         $html ="<h1>Ticket </h1><br><h2>von ".$ticket->von." nach ".$ticket->nach."</h2>";
         $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
         $pdf->SetCreator(PDF_CREATOR);

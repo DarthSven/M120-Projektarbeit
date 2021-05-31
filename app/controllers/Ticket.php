@@ -17,7 +17,7 @@ class Ticket extends Controller
         $ticket->erwachsene = $erw;
         $ticket->kinder = $kid;
         $ticket->hunde = $dog;
-        $pdf->billing($ticket);
+        $pdf->GenerateTicket($ticket);
         $this->view("home/index");
     }
 }

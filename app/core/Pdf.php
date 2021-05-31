@@ -14,7 +14,7 @@ class Pdf{
         $pdf->SetSubject('Ticket '.$ticket->von." - ".$ticket->nach);
         $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
 
-// Auswahl der MArgins
+// Auswahl der Margins
         $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
         $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
         $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);

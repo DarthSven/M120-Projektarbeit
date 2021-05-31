@@ -25,7 +25,7 @@
         <input type="hidden" value="0" id="ankunftInput" class="form-control"><br>
         <input type="hidden" value="0" id="abfahrtInput" class="form-control"><br>
         <input type="hidden" value="0" id="abfahrtsort" class="form-control"><br>
-        <input type="hidden" value="0" id="ankunftsort" class="form-control"><br>
+        <input type="hidden" value="0" id="ankunftsort" class="form-control">
         <div class="forms-button-div">
             <button type="button" class="forms-button btn btn-primary" onclick="GoToFinishPage()">Weiter</button>
             <button type="button" class="forms-button btn btn-secondary" onclick="GoBack()">Zurück</button>

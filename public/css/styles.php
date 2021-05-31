@@ -142,6 +142,8 @@ table {
     color: white;
     font-weight: bold;
     background-color: gray !important;
+    overflow-y: scroll;
+
 }
 #overlay * {
     background-color: gray !important;

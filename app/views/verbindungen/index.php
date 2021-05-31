@@ -1,37 +1,59 @@
-<div class="OuterDiv2">
-    <div style="width: 50%;width: 50%;
-    border: 2px solid black;">
-        <h2>Mögliche Verbindungen: </h2>
-        <p>Abfasfahrtssinort: <?= $data["von"] ?><br>
-            Ankunftsort: <?= $data["nach"] ?><br>
-            Abfahrtszeit: <?= $data["time"] ?></p>
+<div class="d-flex justify-content-center">
+<div>
 
-        <div id="verbindungenDiv">
-            <h1>Lade Verbindungen... <img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif"
-                                          height="50px"></h1>
+    <h2>Mögliche Verbindungen: </h2>
+    <p>Abfahrtsort: <?= $data["von"] ?><br>
+        Ankunftsort: <?= $data["nach"] ?><br>
+        Abfahrtszeit: <?= $data["time"] ?></p>
 
-        </div>
+    <div id="verbindungenDiv">
+        <h1>Lade Verbindungen... <img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif"
+                                      height="50px"></h1>
+
     </div>
 </div>
-<div id="overlay">
-    <form class="numbersform">
-        <br>
-        <label>Erwachsene</label><br>
-        <input type="number" value="0" id="erwachsene" class="form-control"><br>
-        <label>Kinder / Halbtax</label><br>
-        <input type="number" value="0" id="kinder" class="form-control"><br>
-        <label>Hunde</label><br>
-        <input type="number" value="0" id="hunde" class="form-control"><br>
-        <input type="hidden" value="0" id="ankunftInput" class="form-control"><br>
-        <input type="hidden" value="0" id="abfahrtInput" class="form-control"><br>
-        <input type="hidden" value="0" id="abfahrtsort" class="form-control"><br>
-        <input type="hidden" value="0" id="ankunftsort" class="form-control">
-        <div class="forms-button-div">
-            <button type="button" class="forms-button btn btn-primary" onclick="GoToFinishPage()">Weiter</button>
-            <button type="button" class="forms-button btn btn-secondary" onclick="GoBack()">Zurück</button>
-        </div>
-    </form>
+
 </div>
+
+<div class="modal" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Passagiere</h5>
+
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Erwachsene</label><br>
+                    <input type="number" value="0" id="erwachsene" class="form-control"><br>
+                </div>
+                <div class="form-group">
+                    <label>Kinder / Halbtax</label><br>
+                    <input type="number" value="0" id="kinder" class="form-control"><br>
+                </div>
+                <div class="form-group">
+                    <label>Hunde</label><br>
+                    <input type="number" value="0" id="hunde" class="form-control"><br>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" value="0" id="ankunftInput" class="form-control"><br>
+                    <input type="hidden" value="0" id="abfahrtInput" class="form-control"><br>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" value="0" id="abfahrtsort" class="form-control"><br>
+                    <input type="hidden" value="0" id="ankunftsort" class="form-control">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="GoToFinishPage()" class="btn btn-primary">Weiter</button>
+                <button type="button"  data-dismiss="modal" class="btn btn-secondary" >Zurück</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
 <script>
     function GoBack() {
         $("#overlay").hide();
@@ -47,17 +69,27 @@
         success: function (result) {
 
 
-            let table = "<table><thead><tr><th>Von</th><th>Bis</th><th>Abfahrtszeit</th><th>Ankunftszeit</th><th>Kaufen</th><tr/></thead></tbody>";
+            let table = '<table class="table table-striped"><thead><th scope="col">Von</th><th scope="col">Bis</th><th scope="col">Abfahrtszeit</th><th scope="col">Ankunftszeit</th><th scope="col">Kaufen</th> </thead><tbody>';
             result.connections.forEach(connection => {
                 console.log(connection);
                 let abfahrtTimestamp = new Date(connection.from.departure).getTime();
                 let ankunftTimestamp = new Date(connection.to.arrival).getTime();
                 let abfahrt = new Date(connection.from.departure).toLocaleString();
                 let ankunft = new Date(connection.to.arrival).toLocaleString();
-                table = table + "<tr><td>" + connection.from.location.name + "</td><td>" + connection.to.location.name + "</td><td>" + abfahrt + "</td><td>" + ankunft + "</td><td><button class='p2 m2 btn btn-primary' onclick='kaufen(" + abfahrtTimestamp + ", " + ankunftTimestamp + ', "' + connection.from.location.name + '", "' + connection.to.location.name + "\")'>Kaufen</button></td><tr/>";
+
+                let colAbfahrt = '<td>' +  abfahrt + '</td>';
+                let colAnkunft = '<td>' +  ankunft + '</td>';
+                let colFrom = '<td>' + connection.from.location.name + '</td>';
+                let colTo = '<td>' + connection.to.location.name + '</td>';
+                let onClickFunction = "'kaufen(" + abfahrtTimestamp + ", " + ankunftTimestamp + ', "' + connection.from.location.name + '", "' + connection.to.location.name + "\")'";
+                let buttonBuy = '<td><button data-toggle="modal" data-target="#myModal" class="btn" onclick='+onClickFunction +'>Kaufen</button></td>';
+             //   table = table + "<tr><td>" + connection.from.location.name + "</td><td>" + connection.to.location.name + "</td><td>" + abfahrt + "</td><td>" + ankunft + "</td><td><button class='p2 m2 btn btn-primary' onclick='kaufen(" + abfahrtTimestamp + ", " + ankunftTimestamp + ', "' + connection.from.location.name + '", "' + connection.to.location.name + "\")'>Kaufen</button></td><tr/>";
+
+                let row = '<tr>' + colFrom + colTo + colAbfahrt + colAnkunft + buttonBuy+ '</tr>';
+                table += row;
 
             });
-            table = table + "</tbody>"
+            table += '</tbody></table>';
             $("#verbindungenDiv").empty();
             $("#verbindungenDiv").append(table);
 
@@ -70,7 +102,7 @@
         $("#abfahrtInput").val(abfahrt);
         $("#abfahrtsort").val(aOrt);
         $("#ankunftsort").val(bOrt);
-        $("#overlay").show();
+
 
     }
 </script>

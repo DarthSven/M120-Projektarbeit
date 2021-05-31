@@ -25,7 +25,7 @@
         if (!strpos(strtolower($actual_link), "public/settings")) {
             setcookie("href", $actual_link);
         }
-        
+
         echo "<a  href='/M120-Projektarbeit/public/settings' class='d-inline'><i class='fas fa-cog fa-5x'></i></a>";
         ?>
     </div>

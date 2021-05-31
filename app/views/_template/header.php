@@ -22,9 +22,10 @@
     <div class="col  d-flex justify-content-end">
         <?php
         $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-        if (!str_contains($actual_link, "public/settings")) {
+        if (!str_contains(strtolower($actual_link), "public/settings")) {
             setcookie("href", $actual_link);
         }
+        
         echo "<a  href='/M120-Projektarbeit/public/settings' class='d-inline'><i class='fas fa-cog fa-5x'></i></a>";
         ?>
     </div>

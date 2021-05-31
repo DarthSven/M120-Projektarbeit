@@ -83,6 +83,10 @@ a:hover {
 
 }
 
+.table *{
+border: none;
+}
+
 #HinRueckFahrt {
     background-image: url("../img/japanLok.jpg");
     background-repeat: no-repeat;

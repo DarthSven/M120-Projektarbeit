@@ -12,7 +12,7 @@ class Pdf
     {
         $html = "<h1>Ihr ganz Persönliches Ticket steht zum Druck bereit!</h1><br><h2>von " . $ticket->von . " nach " . $ticket->nach . "</h2><br><h2>Ihre Verbindung</h2><br><h4>Abfahrt: $ticket->abfahrt</h4><br><h4>Ankunft: $ticket->ankunft</h4>
 <br><br><h2>Folgende Tickets wurden gekauft:</h2><br><h4>Erwachsene: $ticket->erwachsene<br>Kinder: $ticket->kinder<br>Hunde: $ticket->hunde</h4>
-<br>Gesammtpreis: $ticket->price CHF<br><h3>Ihr Tickettyp: $ticket->typ</h3><br><br><br><p>Vielen Dank, dass sie sich für die SBB entschieden haben. </p>
+<br>Gesammtpreis: $ticket->price CHF<br><h3>Ihr Tickettyp: $ticket->typ</h3><br><br><br><br><br><br><p>Vielen Dank, dass sie sich für die SBB entschieden haben. </p>
 <p>Geniessen Sie eine Schmerzlose Fahrt in den neuen Massageabteilen. Tickets nicht erhätlich. </p>
 <p>Wenn Sie fragen zu useren Dienstlsietungen haben, wenden Sie sich an das Fachpersonal unter <a href='mailto:spam@sbb.ch'>spam@sbb.ch</a>. Wir werden ihr Anliegen schnellstmöglich ignorieren. 
 Wir freuen uns, Sie bald wieder auf diesem Ticketautomaten begrüssen können zu dürfen. </p>

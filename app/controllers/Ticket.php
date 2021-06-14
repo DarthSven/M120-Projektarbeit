@@ -10,8 +10,8 @@ class Ticket extends Controller
         $pdf = new Pdf();
 
         $ppp = $an - $ab;
-        $ppp = date('h.i', $ppp);
-        $price = ($erw * $ppp * 8) + ($kid * $ppp * 4) + ($dog * $ppp * 2);
+        $ppp = date('h.i', substr($ppp,0,-3));
+        $price = (($erw * $ppp * 2) + ($kid * $ppp * 1) + ($dog * $ppp * 0.5));
         $type = $_COOKIE["type"];
         $text = "Hinfahrt";
         if ($type == 2) {

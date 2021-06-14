@@ -1,5 +1,9 @@
 <?php
-
+if (isset ($_GET["type"]))
+{
+    $type = $_GET["type"];
+    setcookie("type", $type);
+}
 ?>
 
 <div class="OuterDiv">

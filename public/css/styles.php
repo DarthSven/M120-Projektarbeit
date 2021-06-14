@@ -132,27 +132,3 @@ table {
 {
     margin: 2px;
 }
-#overlay {
-    position: fixed;
-    display: none;
-    width: 60%;
-    height: 60%;
-    top: 20%;
-    left: 20%;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-    border-radius: 50px;
-    color: white;
-    font-weight: bold;
-    background-color: gray !important;
-    overflow-y: scroll;
-
-}
-#overlay * {
-    background-color: gray !important;
-
-}
-.numbersform {
-    margin: 30px;
-}

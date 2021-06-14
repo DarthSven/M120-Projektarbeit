@@ -23,7 +23,7 @@ if (isset ($_GET["type"]))
                 </div>
                 <div class="col">
                     <label for="Time">Abfahrtszeit</label>
-                    <input type="date" class="form-control" id="Time" required name="zeit">
+                    <input type="datetime-local" class="form-control" id="Time" required name="zeit">
 
                 </div>
             </div>

@@ -11,5 +11,6 @@ class TicketModel
     public $kinder;
     public $hunde;
     public $typ;
+    public $price;
 
 }
